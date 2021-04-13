@@ -74,12 +74,14 @@ public void moveBall() {
   bally = bally + ballSpeedY;
   //ballCollision
   if (ballx >= 560 && ballx <= 580 && bally >= p2y && bally <= (p2y + 120)) ballDirX = false;
-  if (ballx >= 20 && ballx <= 40 && bally >= p1y && bally <= (p1y + 120)) ballDirX = true;
+  if (ballx >= 20 && ballx <= 40 && bally >= p1y && bally <= (p1y + 120)) ballDirX = true; //<>//
   if (bally >= 590) ballDirY = false;
   if (bally <= 10) ballDirY = true;
   
   //ball scoring
   if (ballx <= -10) {
+    scoreArray[scoreArrayIndex] = p1score;
+    scoreArrayIndex++;
     p1score = 0;
     reinitNodes();
     reinitVars();
@@ -197,6 +199,9 @@ int permutation = 0;
 int generation = 0;
 
 boolean realPlayer = false; //determines whether the user is playing or a basic ai
+
+int[] scoreArray = new int[99];
+int scoreArrayIndex = 0;
 
   public void settings() {  size(600, 600); }
   static public void main(String[] passedArgs) {

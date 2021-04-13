@@ -16,3 +16,6 @@ int permutation = 0;
 int generation = 0;
 
 boolean realPlayer = false; //determines whether the user is playing or a basic ai
+
+int[] scoreArray = new int[99];
+int scoreArrayIndex = 0;

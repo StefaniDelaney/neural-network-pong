@@ -64,6 +64,8 @@ void moveBall() {
   
   //ball scoring
   if (ballx <= -10) {
+    scoreArray[scoreArrayIndex] = p1score;
+    scoreArrayIndex++;
     p1score = 0;
     reinitNodes();
     reinitVars();
