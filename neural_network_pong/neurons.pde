@@ -1,5 +1,5 @@
 //c reference to bias level, D refers to down, U to up
-class node0 {
+class nnBrain {
   float outputU;
   float biasU;
   float p1ycU;
@@ -20,8 +20,8 @@ class node0 {
   float ballSpeedYcD;
   float ballSpeedcD;
   float hitscD;
-  int score = p1score;
-  node0 (float a, float b, float c, float d, float e, float f, float g, float h, float i, float j, float k, float l, float m, float n, float o, float p, float q, float r, float s, float t) {
+  int score;
+  nnBrain (float a, float b, float c, float d, float e, float f, float g, float h, float i, float j, float k, float l, float m, float n, float o, float p, float q, float r, float s, float t) {
     outputU = a;
     biasU = b;
     p1ycU = c;
@@ -66,6 +66,7 @@ class node0 {
     hitscD = random(0,1);
   }
   void update() {
+    score = hits;
     outputU = 0;
     outputD = 0;
     outputU = outputU + (1 * (p1y * p1ycU) + (p2y * p2ycU) + (ballx * ballxcU) + (bally * ballycU) + (ballSpeedX * ballSpeedXcU) + (ballSpeedY * ballSpeedYcU));

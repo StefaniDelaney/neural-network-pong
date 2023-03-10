@@ -15,6 +15,7 @@ int p1highscore = 0;
 int permutation = 0;
 int generation = 0;
 int hits = 0; //times nn ai has hit the ball
+int currentPerm = 0; //current version of nn ai this gen 
 
 boolean realPlayer = false; //determines whether the user is playing or a basic ai
 

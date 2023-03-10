@@ -1,6 +1,6 @@
 void keyPressed() {
   if (keyCode == ENTER) {
-    reinitNodes();
+    reinitBrain(currentPerm);
     reinitVars();
   }
 }
